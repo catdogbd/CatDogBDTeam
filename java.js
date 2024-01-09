@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get the search input and button
     const searchInput = document.getElementById("searchInput");
     const searchButton = document.getElementById("searchButton");
+    const searchResults = document.getElementById("searchResults");
 
     // Add an event listener to the search button
     searchButton.addEventListener("click", performSearch);
@@ -9,7 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to perform full-text search
     async function performSearch() {
         const searchTerm = searchInput.value.toLowerCase();
-        const searchResults = document.getElementById("searchResults");
+
+        // Show loading animation
+        searchResults.innerHTML = '<li class="loading"><div class="spinner"></div> Searching...</li>';
 
         // Fetch data from the text file
         const data = await fetchData();
@@ -29,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         } else {
             const li = document.createElement("li");
-            li.textContent = "No Result,Countact Us, or wait for Submiting";
+            li.textContent = "Not Found";
             searchResults.appendChild(li);
         }
     }
