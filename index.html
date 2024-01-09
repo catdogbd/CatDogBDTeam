@@ -1,101 +1,36 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CatDogBDTeam</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: black; /* Set background color to black */
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-
-        /* Center the search box */
-        div {
-            text-align: center;
-            margin-top: 20px; /* Adjust the margin as needed */
-        }
-
-        input[type="text"] {
-            padding: 8px;
-        }
-
-        nav {
-            background-color: dodgerblue; /* Set background color to dodgerblue */
-            color: white;
-            padding: 10px;
-            text-align: center; /* Center the menu */
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-        }
-    </style>
+    <title>iOS-style GitHub Pages</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <h1>CatDogBDTeam</h1>
+        <h1>iOS-Style GitHub Pages</h1>
     </header>
 
-    <!-- Search Bar -->
-    <div>
-        <input type="text" id="searchBar" placeholder="Search...">
-        <button onclick="searchFunction()">Search</button>
-    </div>
+<!-- Update the search section with a centered container -->
+<section class="search-container">
+    <input type="text" id="searchInput" placeholder="Enter search term">
+    <button id="searchButton">Search</button>
+</section>
 
-    <!-- Menu -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#doctor">Doctor</a></li>
-            <li><a href="#rTeam">R Team</a></li>
-        </ul>
-    </nav>
+<!-- Add a centered container for the search results -->
+<section class="results-container">
+    <ul id="searchResults"></ul>
+</section>
 
-    <!-- Your content goes here -->
 
-    <!-- Add your JavaScript scripts or link to an external script here -->
-    <script>
-        function searchFunction() {
-            var searchTerm = document.getElementById('searchBar').value;
-            console.log('Search term:', searchTerm);
 
-            // Example: If the search term is 'cat', perform some action
-            if (searchTerm.toLowerCase() === 'cat') {
-                console.log('Found a cat!');
-                // Add your logic for handling the 'cat' search term
-            }
 
-            // Example: If the search term is 'dog', perform some action
-            if (searchTerm.toLowerCase() === 'dog') {
-                console.log('Found a dog!');
-                // Add your logic for handling the 'dog' search term
-            }
-
-            // Here, you can perform further actions with the search term, like making an API call, etc.
-        }
-    </script>
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
