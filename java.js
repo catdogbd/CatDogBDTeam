@@ -20,12 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
         // Filter data based on search term
         const filteredData = data.filter(item => item.toLowerCase().includes(searchTerm));
 
-        // Display search results
-        filteredData.forEach(result => {
+        // Display search results or "Not Found" message
+        if (filteredData.length > 0) {
+            filteredData.forEach(result => {
+                const li = document.createElement("li");
+                li.textContent = result;
+                searchResults.appendChild(li);
+            });
+        } else {
             const li = document.createElement("li");
-            li.textContent = result;
+            li.textContent = "No Result,Countact Us, or wait for Submiting";
             searchResults.appendChild(li);
-        });
+        }
     }
 
     // Function to fetch data from the text file
