@@ -13,10 +13,10 @@
         }
 
         header {
-            background-color: #333;
-            color: #fff;
             padding: 1em;
             text-align: center;
+            color: #fff;
+            animation: changeGradient 5s infinite;
         }
 
         nav {
@@ -49,36 +49,39 @@
             bottom: 0;
             width: 100%;
         }
+
+        @keyframes changeGradient {
+            0% {
+                background: linear-gradient(to right, #ff6b6b, #556270);
+            }
+            50% {
+                background: linear-gradient(to right, #48c6ef, #6f86d6);
+            }
+            100% {
+                background: linear-gradient(to right, #56ab2f, #a8e063);
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Your Website Name</h1>
+        <h1>CatDogBD</h1>
     </header>
 
     <nav>
         <a href="#">Home</a> |
         <a href="#">About</a> |
-              <a href="#">About</a> |
         <a href="#">Contact</a>
     </nav>
 
-    <main>
-        <h2>Welcome to Your Website</h2>
-        <p>This is a simple example of a website using HTML, CSS, and JavaScript.</p>
-        <button onclick="changeText()">Click me</button>
-    </main>
+
 
     <footer>
         &copy; 2024 Your Website Name
     </footer>
 
-    <script>
-        function changeText() {
-            document.querySelector('h2').innerHTML = 'Text changed using JavaScript!';
-        }
-    </script>
+
 
 </body>
 </html>
