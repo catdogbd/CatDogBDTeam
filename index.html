@@ -3,85 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
+    <title>CatDogBDTeam</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: black; /* Set background color to black */
         }
 
         header {
-            padding: 1em;
+            background-color: #333;
+            color: white;
             text-align: center;
-            color: #fff;
-            animation: changeGradient 5s infinite;
+            padding: 10px;
+        }
+
+        /* Center the search box */
+        div {
+            text-align: center;
+            margin-top: 20px; /* Adjust the margin as needed */
+        }
+
+        input[type="text"] {
+            padding: 8px;
         }
 
         nav {
-            background-color: #000;
-            color: #fff;
-            padding: 0.5em;
-            text-align: center;
+            background-color: dodgerblue; /* Set background color to dodgerblue */
+            color: white;
+            padding: 10px;
+            text-align: center; /* Center the menu */
         }
 
-        nav a {
-            color: #fff;
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
             text-decoration: none;
-            padding: 0 10px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        @keyframes changeGradient {
-            0% {
-                background: linear-gradient(to right, #ff6b6b, #556270);
-            }
-            50% {
-                background: linear-gradient(to right, #48c6ef, #6f86d6);
-            }
-            100% {
-                background: linear-gradient(to right, #56ab2f, #a8e063);
-            }
+            color: white;
         }
     </style>
 </head>
 <body>
-
+    <!-- Header -->
     <header>
-        <h1>CatDogBD</h1>
+        <h1>CatDogBDTeam</h1>
     </header>
 
+    <!-- Search Bar -->
+    <div>
+        <input type="text" id="searchBar" placeholder="Search...">
+        <button onclick="searchFunction()">Search</button>
+    </div>
+
+    <!-- Menu -->
     <nav>
-        <a href="#">Home</a> |
-        <a href="#">About</a> |
-        <a href="#">Contact</a>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#doctor">Doctor</a></li>
+            <li><a href="#rTeam">R Team</a></li>
+        </ul>
     </nav>
 
+    <!-- Your content goes here -->
 
+    <!-- Add your JavaScript scripts or link to an external script here -->
+    <script>
+        function searchFunction() {
+            var searchTerm = document.getElementById('searchBar').value;
+            console.log('Search term:', searchTerm);
 
-    <footer>
-        &copy; 2024 Your Website Name
-    </footer>
+            // Example: If the search term is 'cat', perform some action
+            if (searchTerm.toLowerCase() === 'cat') {
+                console.log('Found a cat!');
+                // Add your logic for handling the 'cat' search term
+            }
 
+            // Example: If the search term is 'dog', perform some action
+            if (searchTerm.toLowerCase() === 'dog') {
+                console.log('Found a dog!');
+                // Add your logic for handling the 'dog' search term
+            }
 
-
+            // Here, you can perform further actions with the search term, like making an API call, etc.
+        }
+    </script>
 </body>
 </html>
