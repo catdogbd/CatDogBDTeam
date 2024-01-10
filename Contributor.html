@@ -61,8 +61,8 @@
 
 
 <!-- Add a centered container for the search results -->
-<style>
-  body {
+  <style>
+        body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
@@ -77,6 +77,7 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            overflow-x: auto; /* Enable horizontal scrolling on small screens */
         }
 
         th, td {
@@ -86,15 +87,23 @@
         }
 
         th {
-            background-color: #4CAF50;
+            background-color: #3498db;
             color: white;
         }
 
         tr:nth-child(even) {
-            background-color: #f9f9f9;
+            background-color: #ecf0f1;
         }
 
-        @media only screen and (max-width: 600px) {
+        tr:hover {
+            background-color: #f1c40f;
+        }
+
+        @media only screen and (max-width: 768px) {
+            table {
+                font-size: 14px;
+            }
+
             th, td {
                 display: block;
                 width: 100%;
@@ -107,16 +116,18 @@
 
             td {
                 text-align: left;
+                margin-bottom: 10px; /* Add some spacing between cells */
             }
         }
     </style>
+</head>
+<body>
+
+<h2>Dynamic Table</h2>
+
 <table id="dataTable">
     <thead>
-        <tr>
-            <th>Name</th>
-            <th>From</th>
-            <th>GitHub User ID</th>
-        </tr>
+
     </thead>
     <tbody></tbody>
 </table>
